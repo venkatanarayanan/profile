@@ -4,6 +4,7 @@ library(shiny.semantic)
 ui <- navbarPage(
   theme = shinythemes::shinytheme("slate"),
   fluid = TRUE,
+  position = "fixed-top",
   collapsible = "TRUE",
   "Venkatanarayanan V",
   tabPanel(id = "panel 2",
@@ -12,7 +13,7 @@ ui <- navbarPage(
              column(12,
                     div(style = "font-weight: bold;
                       font-size:38px;
-                      text-align:center;margin: 20px 2px 20px 0px;
+                      text-align:center;margin: 50px 2px 50px 0px;
                       color:mediumseagreen;",
                       "Profile Summary",
                     ),
@@ -22,7 +23,7 @@ ui <- navbarPage(
              style = "font-size:12px;
                       margin: 20px 2px 20px 0px;
                       color:#ffffff;
-             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
+             box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2), 20px 6px 20px 6px rgba(0, 0, 0, 0.19);",
              column(6,
                     div(
                       style = "font-size:18px;
@@ -55,6 +56,54 @@ ui <- navbarPage(
                       textOutput("otherInterests")
                     )
              )
+           ),
+           fluidRow(
+             column(12,
+                    div(style = "font-weight: bold;
+                      font-size:38px;
+                      text-align:center;margin: 20px 2px 20px 0px;
+                      color:mediumseagreen;",
+                        "Social Profiles",
+                    ))
+           ),
+           fluidRow(
+             style = "font-size:18px;
+                      margin: 20px 2px 20px 0px;
+                      text-align:center;
+                      color:#ffffff;
+             box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2), 20px 6px 20px 6px rgba(0, 0, 0, 0.19);",
+             column(3,
+                    div(
+                      style = "margin: 20px",
+                      img(src="twitter.png",
+                          width = "32",
+                          height = "32"),
+                      a("@VenkyReddevil", href="https://twitter.com/VenkyReddevil")
+                    )),
+             column(3,
+                    div(
+                      style = "margin: 20px",
+                      img(src="linkedin.png",
+                          width = "32",
+                          height = "32"),
+                      "Linkedin"
+                    )),
+             column(3,
+                    div(
+                      style = "margin: 20px",
+                      img(src="twitter.png",
+                          width = "32",
+                          height = "32"),
+                      "Github"
+                    )),
+             column(3,
+                    div(
+                      style = "margin: 20px",
+                      img(src="twitter.png",
+                          width = "32",
+                          height = "32"),
+                      "Blog"
+                    )),
            )
            ),
   tabPanel(id = "panel1",
